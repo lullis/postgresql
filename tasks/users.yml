@@ -6,7 +6,7 @@
     state: started
 
 - name: PostgreSQL | Make sure the PostgreSQL users are present
-  postgresql_user:
+  community.postgresql.postgresql_user:
     name: "{{item.name}}"
     password: "{{ item.pass | default(omit) }}"
     encrypted: "{{ item.encrypted | default(omit) }}"
